@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+	
+</head>
+<body>
+	<div class="cotainer">
+		<div class="card mx-auto mt-5 col-md-5 bg-primary">
+			<div class="card-body">
+				<h2 class="text-center bg-warning text-secondary">Login Form</h2>
+				<form>
+					<input type="text" name="uname" placeholder="Enter your username" class="form-control my-3">
+
+					<input type="password" name="psw" placeholder="Enter your password" class="form-control my-3">
+
+					<button class="btn btn-danger">Login</button>
+
+				</form>
+			</div>
+		</div>
+	</div>		
+</body>
+</html>

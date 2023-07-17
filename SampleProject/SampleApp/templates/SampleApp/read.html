@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fetch data</title>
+</head>
+<body>
+<table border="3">
+	<thead>
+		<tr>
+
+			<th>Name</th>
+			<th>RollNumber</th>
+			<th>Age</th>
+			<th>Mobile</th>
+			<th>Email</th>
+			<th>Address</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		{% for i in data %}
+			<tr>
+				<td>{{i.name}}</a></td>
+				<td>{{i.rollnum}}</td>
+				<td>{{i.age}}</td>
+				<td>{{i.mobile}}</td>
+				<td>{{i.email}}</td>
+				<td>{{i.address}}</td>
+
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+</body>
+</html>

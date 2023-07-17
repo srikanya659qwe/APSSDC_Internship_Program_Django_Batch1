@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>external page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/sample.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/sample.js' %}"></script>
+
+	<style type="text/css">
+		body{
+			background-image: url({% static 'images/card10.jpg' %});
+			background-size: cover;
+			background-repeat: no-repeat;
+
+		}
+		
+	</style>
+</head>
+<body>
+	<h3>Registration Form</h3>
+	<form>
+		<input type="text" name="uname" placeholder="Enter your username"><br><br>
+		<input type="email" name="email" placeholder="Enter your Email"><br><br>
+		<input type="number" name="mbl" placeholder="Enter your Number"><br><br>
+		<input type="password" name="psw" placeholder="Enter your password"><br><br>
+		<input type="password" name="cpsw" placeholder="Enter Your Confirm Password"><br><br>
+
+		<button>Register</button>
+		<!-- <input type="submit" name="submit" value="Register"> -->
+	</form>
+	<img src="{% static 'images/card2.png' %}">
+</body>
+</html>

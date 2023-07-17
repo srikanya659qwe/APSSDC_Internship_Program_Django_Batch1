@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		body{
+			background-image: url({% static 'images/card10.jpg' %});
+			background-size: cover;
+			background-repeat: no-repeat;
+
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="cotainer">
+		<div class="card mx-auto mt-5 col-md-5 bg-primary">
+			<div class="card-body">
+				<h2 class="text-center bg-warning text-secondary">Login Form</h2>
+				<form>
+					<input type="text" name="uname" placeholder="Enter your username" class="form-control my-3">
+
+					<input type="password" name="psw" placeholder="Enter your password" class="form-control my-3">
+
+					<button class="btn btn-danger">Login</button>
+
+				</form>
+			</div>
+		</div>
+	</div>		
+</body>
+</html>
