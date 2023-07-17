@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>read page</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+<body>
+	<div class="container mt-4 bg-warning">
+		<h2 class="alert alert-text text-center bg-primary">Dispaly Data</h2>
+		<a href="{% url 'insert' %}" class="btn btn-secondary">Register</a>
+		<table class="table table-bordered">
+			<thead>
+				<tr class="bg-danger text-warning">
+					<th>S.no</th>
+					<th>Name</th>
+					<th>Rollnumber</th>
+					<th>Age</th>
+					<th>Mobile</th>
+					<th>Email Address</th>
+					<th>Address</th>
+					<th colspan="2">Operations</th>
+				</tr>
+				<tbody>
+					{% for i in data %}
+					<tr>
+						<td>{{i.id}}</td>
+						<td>{{i.name}}</td>
+						<td>{{i.rollnum}}</td>
+						<td>{{i.age}}</td>
+						<td>{{i.mobile}}</td>
+						<td>{{i.email}}</td>
+						<td>{{i.address}}</td>
+						<td><a href="{% url 'update' i.id %}" class="btn btn-success">Update</td>
+						<td><a href="{% url 'delete' i.id %}" class="btn btn-danger">Delete</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</thead>
+			
+		</table>
+	</div>
+</body>
+</html>

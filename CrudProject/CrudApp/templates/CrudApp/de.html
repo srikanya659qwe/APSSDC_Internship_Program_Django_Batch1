@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delete page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		<h2 class="text-center">Are you sure to delete the {{info.name}} record</h2>
+		<div class="text-center">
+			<input type="submit" name="submit" value="Delete" class="btn btn-secondary ">
+			<a href="{% url 'fetch' %}" class="btn btn-primary">Cancel</a>
+		</div>
+	</form>
+</body>
+</html>

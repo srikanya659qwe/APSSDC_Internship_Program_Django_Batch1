@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+<body>
+	<form method="POST">
+		<div class="card">
+			<div class="card-header bg-primary mt-5 col-md-5">Update Form</div>
+				<div class="card-body col-md-5 ">
+					{% csrf_token %}
+					{{form.as_p}}
+					
+
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-secondary">Update</button>
+				</div>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table page</title>
+	<title>read page</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+<body>
+	<table class="table table-bordered bg- info">
+		<thead>
+			<tr class="bg-warning" >
+				<th>s.no</th>
+				<th>name</th>
+				<th>rollnumber</th>
+				<th>age</th>
+				<th>mobile</th>
+				<th>email</th>
+				<th>address</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for i in data %}
+				<tr>
+					<td>{{i.id}}</td>
+					<td>{{i.name}}</td>
+					<td>{{i.rollnum}}</td>
+					<td>{{i.age}}</td>
+					<td>{{i.mobile}}</td>
+					<td>{{i.email}}</td>
+					<td>{{i.address}}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
