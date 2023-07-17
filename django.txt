@@ -1,0 +1,379 @@
+Django introduction:
+	- s/w installation
+		- python
+		- django package
+		- editor
+
+	-  what is django?
+		- it is a one of the python web framework
+	- what is framework?
+		- it is used to design to support the development of web applications
+			- web services
+			- web resources
+			- web APIS
+	- Python web frameworks:
+			- django
+			- flask
+			- web2py
+			- bottle
+			- cherrypy
+	- why django framework?
+		- a web application developer much easier to building flexible,scalable and maintainble web application
+
+	- what is django?
+		- developing for web applications
+		- it is a highlevel- it contains MVT architechture
+		- every framework should follow two architechtures:
+				- MVC
+				- MVT
+		- But django follows MVT
+		- it takes less time to build application after collecting client requirements.
+
+	- django features:
+		-very fast(work process very fast)
+		- fully loaded(it contains modules and librarieswhich can be used for handle coomon web development task)
+		- secure(user authentication system provides a secure way to manage user accounts and passwords)
+		- scalability(it is a quickly and flexibly switch from small to large scale applications)
+		-open source(to build application for different different domains)
+
+	-what is MVC AND MVT:
+		- MVC:model view controller
+			model:we can store database files
+			views:we can write logic for user representation(front-end part)
+			controller:we can build main logic for controlling both models and views.
+					controller
+				views                        models
+	- MVT:
+		- MVT:model view templates:
+			model:we can store data base
+			view: it is a controller part it controlls both  model and template
+			templates:we can store.html files(front-end part)
+
+
+		user--->request--->url.py----->views.py(controller)------>templates(front-end)
+							   ------->models(backend)
+
+
+	- project creation:
+		- You have to choose one proper location in pc
+			ex:desktop,doc,c,d
+		- in that location now you have to create one folder
+			ex:summer-intership-django	
+		- in that folder location have to open cmd
+		- for project creation django provides one command i.e
+			- django-admin startproject project name
+			ex: django-admin startproject MyProject
+				- folder
+				- manage.py:it is a django server file
+				- init.py:it is an empty python file
+				- asgi:asyncronous server gateway interface
+				- wsgi:web server gateway interface
+				- urls:we can store our urls
+				- settings:we can do all project settings.
+
+
+
+	- How to create django application:
+		-  wherever manage.py file is located in that location have to create django app.
+		- for app creation django provides one command 
+			i.e python manage.py startapp appname
+				- migrations:we can store db creation files
+				- init.py:it is an empty python file
+				- admin.py:adminstartion GUI
+				- apps.py:it stores entire app information
+				- views.py:it is a controller file it controlls both template and model
+				- models.py:we can store data base files
+				- tets.py:used to test for testcases
+
+	- How to register django app?
+		- django app--->settings.py--->installed apps
+
+	- how to run django server:
+		manage.py--->cmd
+			- for server running django provides one command
+				i,e python manage.py runserver
+
+	- urls creation:
+		- urls.py--->in our project folder
+		- for urls creation django provides one function 
+			i.e path(p1,p2,p3)
+			      path('url name/',views.function name,name of the url)
+		- mvt structure:
+			browser--->127.0.0.1:8000/url name
+			- user-->request--->url format(urls.py)--->views.py(controller)
+
+
+
+	Django templates:
+		- user-->urls---> views-->templates
+		- templates:
+			-we can store .html files
+			- the request is navigate from views to tempaltes we are using function
+				i.e render
+				render(p1,p2,p3)
+				render(request,'html file location',dictionary)
+
+ 	How to create django templates?:
+		- django app(myapp)--->new folder--->templates
+		- templates--->new folder--->django app name(myapp)
+
+	- html file structure:
+		-  doctype
+		<html>
+		<head>
+		</head>
+			<title></title>
+		<body>
+		</body>
+		</html>
+			
+	- DTL:Django template language:
+		- syntax:
+			conditional statements:
+				{% for i in data%}
+					{{print}}
+				{% endfor %}
+			conditional statements:
+				{%if condition% }
+					{{}}
+				{% elif condition%}
+					{{}}
+				{% else%}
+					{{}}
+				{% endif%}
+				{%endelif%}
+				{%endelse%}
+
+		- CSS:Cascading Style Sheets
+			- To provide styles on html elements or tags
+			- stntax:
+				ex:property:value;property1:value1.....
+					ex: color:red;background-color:blue
+		- Types of CSS:
+			- inline Css
+				- to provide styles in single line or same line(body)
+			- internal Css
+				- to provide styles in head tag
+			- External Css
+				- to provides style in one separate .css file.
+		- localhost:8000/url name
+		- registration page:
+			- username
+			- email
+			- mobile number
+			- password
+			- confrim password
+		- html tags:
+
+			- h1 to h6
+			- p
+			- form
+			- input
+			- br
+			- button
+
+		- static file Handling:
+			- static files:
+				we can store .css,.js,images,bootstrap links
+		- how to create static files:
+			- dajngo app folder location--->new folder--->static
+			- static---> 3 new floders---> css folder,js folder,images folder
+		- for linking html provides on e tag(DTL)
+			link
+		- if you want to provide link b/w html and js file
+			script tag
+		- for images--->image tag
+
+		-Bootstrap:
+			- is used to provides effiecient styles on html elements
+			- types:
+				- online bootstrap
+					- we can copy the bootstrap links from online
+					- for styling we are using bootstrap classes:
+					- syntax:
+						property-value property2-valu2,,,,,
+				- offline bootstrap
+
+
+
+			- django admin:
+				- we have to crete one account(superuser account)
+				- for superuser account creation django provides one command
+					      python manage.py migrate				
+					i.e python manage.py createsuperuser
+						username:admin
+						email address:admin@gmail.com
+						psw:Admin@659
+						cpsw:Admin@659
+
+			- model creation:
+				- model:it contains data base files
+					models.py
+				- if you want to create we are using classes
+				- class classname---->database name
+					- data type
+					- length
+			- after completion of model creation have to perform 2 operations:
+					- make migrations
+						- it generates one interface file for our database
+						- for makemigrations django provides one command
+							i.e python manage.py makemigrations
+					- migrate
+						- it converts interface file into tabular format
+						- for migrate django provides one command
+							i.e python manage.py migrate
+
+
+			-ORM queries:(object relational mapping queries):
+			- if you want to apply orm queries we are using python shell
+				- python manage.py shell(exit()))
+					from SampleApp.models import Student
+						- data insertion
+						- data reading/retrieving
+						- data updation
+						- data deletion
+
+
+	- data insertion:
+	--------------
+		- save()
+			variable=modelname(column name='value',column name2='value2'......cn='vn')
+			variable.save()
+			variable
+				ex:ob= Student(name='xxx',rollnum='yyy',age='24',mobile='xxxxxxxxxx'email='xxx@gmail.com',address='xxxxx')
+				      ob.save()
+				      ob
+		- create()
+			obj=modelname.objects.create(column name='value',column name2='value2'......cn='vn')
+			obj
+				ex:obj=Student.objects.create(column name='value',column name2='value2'......cn='vn')
+
+				      obj	
+
+	data retrieve:
+		- if you want to retrieve entire data (rows)from data base
+			- all()
+				- data=modelname.objects.all()
+				   data		
+					
+		- if you want to access specific person details
+			- get()
+			         - it returns only specific person deatils(id)
+			        - we cant access multile records by using get method
+					- modelname.objects.get(id=number)
+					ex: Student.objects.get(id=3)
+			- filter()
+				- it returns multiple records(it allows duplictes values also)
+					-obj= modelname.objects.filter(column name='value')
+					  obj
+		- if you want to access first record from db
+			- first()
+				modelname.objects.first()
+		- if you want to access last record from db
+			- last()
+				modelname.objects.last()
+		- slicing:
+			- modelname.objects.all()[:3]
+
+
+	- data updation:
+	---------------
+		-  First we have to fetch(get) the data from data base
+			ob=modelname.objects.get(id=2)
+			ob
+		- then we will upate
+			ob.column name='updated value'
+				ex: ob.age=28
+			ob.save()
+			ob
+		- to update a specific value in all records
+			info=modelname.objects.all().update(column name=value)
+			ex: Student.objects.all().update(age=30)
+
+
+
+	- data deletion:
+	------------
+		- if you want to delete specific person details from db
+			de=modelname.objects.get(id=2)
+			de
+		- we will delete the datat from db
+			de.delete()
+			
+	
+		- if you want to delte entire data from db
+			-del= modelname.objects.all().delete()
+			  del
+
+	CRUD  Opearations:(Tempaltes--->models)
+		- user--->urls.py--->views.py--->templates(front-end)
+				--->templates--->views
+				--->models--->views
+				---> views--->models
+					---->models(back-end)
+		- new project--->CrudProject
+,		- new app---->CrudAPP
+
+
+	- data insertion using templates:
+                        --------------------------------
+		- model--->registration form---> submit--->inserted into data base
+
+		- http request methods:
+			- get()---> default
+			- post()
+		- template(request type,token)--->views(condition)
+	- data retrieving using tempaltes:
+	-----------------------------------
+
+	- data updation using templates:
+	--------------------------------
+		- get(id=n)--->dynamic urls
+		- update
+			info.
+	-data deletion using templates:
+	------------------------------
+		if you want to delete any record from db
+			- are you sure to delete the record
+				delete         cancel
+
+
+	- Dajngo Forms:
+	---------------
+		- form creation:
+			- django app---> forms
+			widgets----.form-->formcontrol,placeholders
+				as_p
+			- forms.py---> models.py
+		- form validations	
+
+
+
+	email sending:
+	--------------
+		- sender
+			- receiver mail
+			- subject
+			- body
+				-EMAIL_USE_TLS=True
+				- EMAIL_HOST='smtp.gmail.com'
+				- EMAIL_PORT=587
+				-EMAIL_HOST_USER='EMAIL ID'
+				-EMAIL_HOST-PASSWORD='*******'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
